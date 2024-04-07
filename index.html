@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Donalds's app</title>
+<link rel="stylesheet" type="text/css" href="index.css" />
+</head>
+<script type="text/javascript" src="index.js"></script>
+<body>
+  <div class="page-container" src="index.js">
+    <h1>Proper Anesthetic Depth (PAD) Matrix</h1>
+
+    <div class="input-group">
+      <div class="input-container">
+        <p>MAP</p>
+        <input type="number" id="map-input" placeholder="Mean Arterial Pressure (MAP)"></input>
+      </div>
+      <div class="input-container">
+        <p>PSi</p>
+        <input type="number" id="psi-input" placeholder="SedLine Patient State Index (PSi)"></input>
+      </div>
+      <button id="update-button" onclick="updateValues()">Update values</button>
+    </div>
+
+    <div class="grid-and-y">
+      <p class="y-axis-label">MAP</p>
+      <div class="y-axis-markers">
+      </div>
+      <div class="chart">
+        <div class="grid-container">
+          <div id="cell-1" class="cell blue-cell">Too Much Anesthesia...</div>
+          <div id="cell-2" class="cell red-cell">Too Little Anesthesia...</div>
+          <div id="cell-3" class="cell red-cell">Too Little Anesthesia...</div>
+          <div id="cell-4" class="cell blue-cell">Too Much Anesthesia...</div>
+          <div id="cell-5" class="cell yellow-cell">PAD</div>
+          <div id="cell-6" class="cell red-cell">Too Little Anesthesia...</div>
+          <div id="cell-7" class="cell blue-cell">Too Much Anesthesia...</div>
+          <div id="cell-8" class="cell blue-cell">Too Much Anesthesia...</div>
+          <div id="cell-9" class="cell red-cell">Too Little Anesthesia...</div>
+        </div>
+        <p class="y-marker marker" id="y-100">100</p>
+        <p class="y-marker marker" id="y-65">65</p>
+        <p class="x-marker marker" id="x-0">0</p>
+        <p class="x-marker marker" id="x-25">25</p>
+        <p class="x-marker marker" id="x-50">50</p>
+        <p class="x-marker marker" id="x-100">100</p>
+        <div class="dot" id="dot">
+          <p>HERE</p>
+        </div>
+      </div>
+    </div>
+    <p class="x-axis-label">PSi</p>
+
+</body>
+</html>
