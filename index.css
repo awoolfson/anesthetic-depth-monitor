@@ -14,8 +14,8 @@ body {
 
 .grid-container {
     display: grid;
-    grid-template-columns: 300px 300px 600px;
-    grid-template-rows: 135px 135px 195px;
+    grid-template-columns: 300px 300px 300px;
+    grid-template-rows: 135px 135px 135px;
     margin-top: 30px;
 }
 
@@ -70,11 +70,11 @@ input[type="number"] {
 }
 
 .x-marker {
-    top: 480px;
+    top: 430px;
 }
 
 .y-marker {
-    right: 1220px;
+    right: 920px;
 }
 
 .dot {
@@ -107,6 +107,22 @@ input[type="number"] {
 
 .glowing-cell {
     box-shadow:0 0 100px rgb(255, 255, 0);
+    transform: scale(1);
+    animation: pulse 0.5s infinite;
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(1.05);
+	}
+
+	70% {
+		transform: scale(1);
+	}
+
+	100% {
+		transform: scale(1.05);
+	}
 }
 
 .input-container {
@@ -134,13 +150,13 @@ input[type="number"] {
 }
 
 #x-100 {
-    left: 1200px;
+    left: 900px;
 }
 
 #y-65 {
-    bottom: 175px;
+    bottom: 115px;
 }
 
 #y-100 {
-    bottom: 310px;
+    bottom: 250px;
 }
